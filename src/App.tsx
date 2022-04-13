@@ -1,43 +1,41 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <section>
+        <h2>Formulário com React Hook Form</h2>
+        <form>
+          <label>
+            <span>Nome: </span>
+            <input
+              type="text"
+            />
+          </label>
+          <label>
+            <span>Telefone: </span>
+            <input
+              type="number"              
+            />
+          </label>
+          <label>
+            <span>E-mail: </span>
+            <input
+              type="e-mail"
+            />
+          </label>
+          <label>
+            <span>Genero: </span>
+            <select>
+              <option>Selecionar ...</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <button>Enviar</button>
+        </form>
+      </section>
     </div>
   )
 }
